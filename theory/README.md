@@ -58,18 +58,37 @@ A     B     result
 ```
 
 3. `¬(A ∧ B) ∨ ( (A ∧ C) ∧ ¬(B ∨ ¬C) )`   (alternate: `!(A && B) || ( (A && C) && !(B || !C) )`)
-  * (Hint: Is it possible to calculate this using code?)
+  * (Hint: Is it possible to calculate this using code?) Yes and below is a simple C code for this truth table
+#include <stdio.h>
+
+int main(void) {
+int A,B,C;  //change values as per the truth table
+A=1;
+B=1;
+C=1;
+
+int x= !(A && B) || ( (A && C) && !(B || !C));
+  printf("Result for the expression is : %d", x);
+  return 0;
+}
+
 ```
 A     B     C     result
 -------------------------
-0     0     0       ?
-0     0     1       ?
-0     1     0       ?
-0     1     1       ?
-1     0     0       ?
-1     0     1       ?
-1     1     0       ?
-1     1     1       ?
+0     0     0       1
+0     0     1       1
+0     1     0       1
+0     1     1       1
+1     0     0       1
+1     0     1       1
+1     1     0       0
+1     1     1       0
+
+
+
+
+
+
 ```
 
 ## STRETCH GOAL
