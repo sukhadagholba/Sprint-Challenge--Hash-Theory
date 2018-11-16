@@ -41,10 +41,10 @@ Fill out truth tables for the following expressions:
 ```
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
+0     0       0
+0     1       0
+1     0       1
+1     1       0
 ```
 
 2. `(¬A ∨ B) ∧ ¬(A ∧ ¬B)`   (alternate: `(!A || B) && !(A && !B)`)
